@@ -151,23 +151,19 @@ $(document).ready(function () {
  
   // header sticky
   let stickyNavTop = $('header .t4s-header').offset().top;
-  let navbarHeight = $("#header").outerHeight();
   let topbarHeight = $("header .t4s-topbar").outerHeight();
   let lastScrollTop = 0;
   
-
-  var stickyNav = function(){
+  const stickyNav = function(){
     let scrollTop = $(window).scrollTop();
     let st = $(this).scrollTop(); // our current vertical position from the top
     // otherwise change it back to relative
-    if (scrollTop > stickyNavTop) { 
-        $('header .t4s-header').addClass('sticky');
-    } else {
+    if (scrollTop < stickyNavTop) { 
         $('header .t4s-header').removeClass('sticky'); 
     }
-    if (st > lastScrollTop && st > navbarHeight) {
+    if (st > lastScrollTop && st > stickyNavTop ) {
       // Scroll Down
-      $("header .t4s-header").removeClass("t4s-nav-down").addClass("t4s-nav-up");
+      $("header .t4s-header").removeClass("t4s-nav-down").addClass('sticky').addClass("t4s-nav-up");
     }
     else {
       // Scroll Up
@@ -181,14 +177,11 @@ $(document).ready(function () {
       
     }
     lastScrollTop = st;
-    console.log(st)
   };
   stickyNav();
   // and run it again every time you scroll
   $(window).scroll(function() {
     stickyNav();
-    console.log( $(window).height())
-  console.log( $(document).height())
   });
 
 
