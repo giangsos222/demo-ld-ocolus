@@ -337,7 +337,11 @@ p {
     --bs-gutter-x: 60px;
   }
 }
-
+@media(max-width:1366px){
+  .t4s_btn_trial:not(.is--show) {
+    display: none;
+  }
+}
 @media (max-width: 1024px) {
   a.btn {
     padding: 15px 20px !important;
@@ -473,7 +477,7 @@ p {
 }
 .t4s_btn_trial:hover {
   color: #fff;
-  background: #0ec0aed6;
+  background: #112321d6;
 }
 .t4s_btn_trial {
   background: #0ec0ad;

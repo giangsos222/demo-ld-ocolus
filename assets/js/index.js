@@ -9,7 +9,10 @@ $(document).ready(function () {
       ),
     );
   }).on('finish.countdown', function (event) {
-    $('header .t4s-topbar').hide();
+    $('header .topbar-count-down').hide();
+    $('header .t4s-topbar .section-wrap').addClass("min-topbar");
+
+
   });;
   
   $(document).on("click", "#topbar_close", function () {
@@ -116,6 +119,7 @@ $(document).ready(function () {
     $(this).toggleClass("active");
     $(this).parent(".faq-item").toggleClass("active");
     $(this).next(".faq-content").slideToggle();
+    
   });
   // back to top
   $(window).on("scroll", function () {

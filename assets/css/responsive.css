@@ -12,8 +12,15 @@
     font-size: 28px;
   }
   .masonry-isotope .content h5.title_1 {
-    font-size: 34px;
-    line-height: 44px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .masonry-isotope .item-1 .content-inner,.masonry-isotope .item-1 .content-inner span{
+    font-size:28px;
+    line-height:40px;
+  }
+  .masonry-isotope .item-1 .content{
+    bottom:45px;
   }
 }
 
@@ -447,6 +454,9 @@
     font-size: 16px;
     line-height: 20px;
   }
+  .masonry-isotope .item-1 .content-inner img{
+    max-width: 100%;
+  }
 }
 @media (max-width: 992px) {
   .masonry-isotope .item-1 .content {
@@ -726,6 +736,9 @@
   .ecomposer .section-inner {
     background-image: none !important;
   }
+  .masonry-isotope .item-1 .content-inner img{
+    max-width: 200px;
+  }
 }
 
 @media (max-width: 525px) {
@@ -747,6 +760,10 @@
     font-size: 13px;
     line-height: 17px;
   }
+  .masonry-isotope .content {
+    text-align: start !important;
+    align-items: start !important;
+  }
   .ecomposer .title {
     font-size: 24px;
     line-height: 30px;
@@ -756,7 +773,21 @@
   .masonry-isotope .item-7 .content,
   .masonry-isotope .item-9 .content,
   .masonry-isotope .item-11 .content {
-    bottom: 10px;
+    bottom: 25px;
+    padding:0 15px;
+  }
+  .masonry-isotope .item-1 .content-inner, .masonry-isotope .item-1 .content-inner span{
+    font-size: 22px;
+    line-height: 31px;
+  }
+  .masonry-isotope .item-1 .d-flex{
+    justify-content: start !important;
+  }
+  .masonry-isotope .item-1 .content-inner img{
+    max-width: 150px;
+  }
+  .masonry-isotope .item-1 .content-inner{
+    padding: 0 15px;
   }
   .tabs .tabs-group {
     justify-content: flex-start;
