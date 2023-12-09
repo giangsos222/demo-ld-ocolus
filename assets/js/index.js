@@ -113,13 +113,23 @@ $(document).ready(function () {
   });
   // accordion
   $(document).on("click", ".faq-button", function () {
-    $(".faq-item.active").removeClass("active");
-    $(".faq-button.active").removeClass("active");
-    $(".faq-content").hide("slide");
-    $(this).toggleClass("active");
-    $(this).parent(".faq-item").toggleClass("active");
-    $(this).next(".faq-content").slideToggle();
-    
+    var $faqItem = $(this).closest(".faq-item");
+    var $faqContent = $faqItem.find(".faq-content");
+    var $faqbtn = $(this).closest(".faq-button");
+    if ($faqItem.hasClass("active")) {
+      // Nếu phần tử đang active, đóng nó
+      $faqItem.removeClass("active");
+      $faqbtn.removeClass("active");
+      $faqContent.slideUp();
+    } else {
+      // Nếu phần tử không active, đóng tất cả và mở nó
+      $(".faq-item.active, .faq-button.active").removeClass("active");
+      $(".faq-content:visible").slideUp();
+  
+      $(this).toggleClass("active");
+      $faqItem.toggleClass("active");
+      $faqContent.slideToggle();
+    }
   });
   // back to top
   $(window).on("scroll", function () {

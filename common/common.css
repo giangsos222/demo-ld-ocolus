@@ -474,6 +474,7 @@ p {
   align-items: center;
   justify-content: center;
   padding: 0 15px;
+  pointer-events: none;
 }
 .t4s_btn_trial:hover {
   color: #fff;
@@ -490,6 +491,7 @@ p {
   justify-content: center;
   max-width: 235px;
   transition: 0.3s linear;
+  pointer-events: auto;
 }
 .t4s_btn_trial a {
   text-decoration: unset;
